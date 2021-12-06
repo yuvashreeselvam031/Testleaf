@@ -1,0 +1,85 @@
+X- path:
+Basic Relative Xpath:
+======================
+Atrribute Based Xpath:
+----------------------
+//tagName[@attributeName='value']
+//input[@class='inputLogin']
+
+text based xpath:
+-----------------
+text() - node / function
+
+//tagName[text()='textValue']
+//label[text()='Username']
+
+Partial Match Xpath:
+---------------------
+//tagName[contains(@attribute,'partialValueOfTheAttribute')]
+//input[contains(@id,'usern')]
+//label[contains(text(),'Usern')]
+
+Index Based / Collection based Xpath:
+-------------------------------------
+(xpath)[index]
+(//input)[2]
+
+(//label[@for='username'])[1]
+
+
+Parent to Child:
+-----------------
+write the xpath for known element (parent)
+parent xpath/tagName of child
+
+//div[@class='large-6 small-12 columns']/input
+
+Child to Parent:
+----------------
+child xpath/parent::tagName of parent
+
+child xpath/..
+
+//input[@id='email']/parent::div
+
+//input[@id='email']/..
+
+GrandParent to GrandChild:
+--------------------------
+GrandParent xpath//tagName of GrandChild
+
+//div[@class='row']//input
+
+GrandChild to GrandParent
+--------------------------
+xpath GrandChild/../..
+
+xpath GrandChild/ancestor::tagName of GrandParent
+//input[@id='email']/../..
+
+//input[@id='email']/ancestor::div[2]
+
+Elder sibling to Younger sibling:
+---------------------------------
+xpath for elder sibling/following-sibling::tagName of younger
+
+//label[@for='password']/following-sibling::input
+
+Younger to Elder:
+------------------
+xpath for younger sibling/preceding-sibling::tagName of elder
+
+//input[@id='username']/preceding-sibling::label
+
+
+Elder Cousin to younger cousin:
+--------------------------------
+xpath elder cousing/following::tagName of the younger
+
+//label[@for='password']/following::input
+
+Younger to Elder:
+-----------------
+xpath younger cousing/preceding::tagName of the elder
+//label[@for='password']/preceding::input
+
