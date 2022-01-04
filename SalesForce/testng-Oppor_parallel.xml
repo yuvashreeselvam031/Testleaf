@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <parameter name="username" value="earth@testleaf.com"></parameter>
+  <parameter name="password" value="Bootcamp@123"></parameter>
+  <test thread-count="5" name="Test" verbose="5" parallel="classes">
+    <classes>
+    <class name="Opportunity.TC01"/> 
+      <class name="Opportunity.TC02"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
